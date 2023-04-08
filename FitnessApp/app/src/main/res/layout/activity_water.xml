@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFDF"
+    tools:context=".Water">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/header_bg"
+        android:text="nandisedoc"
+        android:textColor="#EFDF"
+        android:padding="20dp"
+        android:textSize="20sp"
+        />
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textprogress"
+        android:max="3200"
+        android:progress="0"
+        android:progressDrawable="@drawable/custom_progressbar" />
+
+    <TextView
+        android:id="@+id/textprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@android:id/progress"
+        android:layout_below="@+id/username"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="0"
+        android:textColor="#031225"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@android:id/progress"
+        android:layout_below="@+id/username"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="/3200 ml"
+        android:textColor="#031225"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerInParent="true"
+        android:id="@+id/addwi"
+        android:src="@drawable/water"
+        android:layout_below="@id/progress">
+    </ImageView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addwi"
+        android:padding="17dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="25sp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button50"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="+50"
+            android:textColor="#EFDF"
+            android:textSize="20dp" />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="+150"
+            android:textColor="#EFDF"
+            android:textSize="20dp"
+            android:layout_toRightOf="@id/button50"
+            android:id="@+id/button150"/>
+
+        <Button
+            android:id="@+id/button250"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button50"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="+250"
+            android:textColor="#EFDF"
+            android:textSize="20dp" />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button150"
+            android:layout_toRightOf="@id/button250"
+            android:layout_margin="20dp"
+            android:text="+350"
+            android:textColor="#EFDF"
+            android:textSize="20dp"
+            android:id="@+id/button350"/>
+
+        <Button
+            android:id="@+id/button500"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button250"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="+500"
+            android:textColor="#EFDF"
+            android:textSize="20dp" />
+        <Button
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button250"
+            android:layout_margin="20dp"
+            android:text="Reset"
+            android:layout_toRightOf="@id/button500"
+            android:textColor="#EFDF"
+            android:textSize="20dp"
+            android:id="@+id/buttonrst"/>
+    </RelativeLayout>
+</RelativeLayout>

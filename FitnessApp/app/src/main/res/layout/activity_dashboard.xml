@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Dashboard"
+    android:background="#EFDCF9"
+    >
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        android:background="@color/bg"
+        app:itemBackground="@color/text"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="118dp"
+                android:background="@drawable/header_bg"
+                android:padding="20dp">
+
+                <ImageView
+                    android:id="@+id/profile_image"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/full_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:fontFamily="sans-serif"
+                    android:text="Nandhini S"
+                    android:textColor="#EFDCF9"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/full_name"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:includeFontPadding="false"
+                    android:text="nandnisedoc"
+                    android:textColor="#EFDCF9"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/username"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/profile_image"
+                    android:includeFontPadding="false"
+                    android:text="Overweight: Weight Loss"
+                    android:textColor="#EFDCF9"
+                    android:textSize="10sp" />
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/text"
+                    android:layout_marginTop="20dp">
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/back"
+                        android:textColor="@color/bg"
+                        android:background="#0000"
+                        android:textStyle="bold"
+                        android:onClick="previousDayAction"
+                        android:textSize="20sp"/>
+
+                    <TextView
+                        android:id="@+id/monthDayText"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="Feb 2021"
+                        android:textSize="20sp"
+                        android:background="#471A5E"
+                        android:textAlignment="center"
+                        android:textColor="@color/bg"/>
+
+                    <Button
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/forward"
+                        android:textColor="@color/bg"
+                        android:background="#0000"
+                        android:textStyle="bold"
+                        android:onClick="nextDayAction"
+                        android:textSize="20sp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/dayOfWeekTV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Monday"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/text"
+                    android:textAlignment="center"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:padding="12dp"
+                android:layout_marginLeft="20dp"
+                android:background="#E1C8FC"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Exercise"
+                    android:textSize="30sp"
+                    android:id="@+id/ex"
+                    android:textColor="@color/text"/>
+
+                <TextView
+                    android:id="@+id/textprogress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/level"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_toLeftOf="@id/desc"
+                    android:text="0"
+                    android:textColor="#031225"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/level"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="/500 Cal"
+                    android:textColor="#031225"
+                    android:textSize="20sp" />
+
+                <ProgressBar
+                    android:id="@+id/level"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ex"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:max="500"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/custom_progressbar" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diet"
+                    android:layout_below="@+id/desc"
+                    android:textSize="30sp"
+                    android:id="@+id/d"
+                    android:textColor="@color/text"/>
+
+                <TextView
+                    android:id="@+id/textprogress1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/level1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_toLeftOf="@id/desc1"
+                    android:text="0"
+                    android:layout_marginRight="36dp"
+                    android:textColor="#031225"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/desc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/level1"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="/2000 KCal"
+                    android:textColor="#031225"
+                    android:textSize="20sp" />
+                <ProgressBar
+                    android:id="@+id/level1"
+                    android:layout_below="@id/d"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:max="2000"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/custom_progressbar" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Water intake"
+                    android:textSize="30sp"
+                    android:id="@+id/w"
+                    android:layout_below="@+id/desc1"
+                    android:textColor="@color/text"/>
+                <TextView
+                    android:id="@+id/textprogress3"
+                    android:layout_below="@id/level2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_toLeftOf="@id/desc3"
+                    android:layout_marginBottom="30dp"
+                    android:text="0"
+                    android:layout_marginRight="36dp"
+                    android:textColor="#031225"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/desc3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/level2"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="/3200 ml"
+                    android:textColor="#031225"
+                    android:textSize="20sp" />
+
+                <ProgressBar
+                    android:id="@+id/level2"
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/w"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:max="3200"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/custom_progressbar" />
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/categories"
+                    android:layout_marginBottom="30dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="25dp"
+                        android:text="Exercise"
+                        android:textColor="#EFDF"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#00000000"
+                        android:padding="20dp"
+                        android:id="@+id/btnwk"
+                        android:text="Expand all" />
+
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/exercise" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="@drawable/categories"
+                    android:layout_marginBottom="30dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Diet"
+                        android:textSize="30sp"
+                        android:padding="25dp"
+                        android:textColor="#EFDF"
+                        android:layout_alignParentRight="true"/>
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expand all"
+                        android:background="#00000000"
+                        android:padding="20dp"
+                        android:id="@+id/foodbtn"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"/>
+                    <ImageView
+                        android:layout_width="135dp"
+                        android:layout_height="135dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/diet" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/win"
+                    android:background="@drawable/categories"
+                    android:layout_marginBottom="75dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Water intake"
+                        android:textSize="30sp"
+                        android:padding="25dp"
+                        android:textColor="#EFDF"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#00000000"
+                        android:padding="20dp"
+                        android:id="@+id/wi_btn"
+                        android:text="Expand all" />
+
+                    <ImageView
+                        android:layout_width="145dp"
+                        android:layout_height="145dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/wi" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

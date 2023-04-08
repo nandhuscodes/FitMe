@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".FB">
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/header_bg"
+        android:padding="20dp"
+        android:text="nandisedoc"
+        android:textColor="#EFDF"
+        android:textSize="20sp" />
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textprogress"
+        android:max="500"
+        android:progress="0"
+        android:progressDrawable="@drawable/custom_progressbar" />
+
+    <TextView
+        android:id="@+id/textprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@android:id/progress"
+        android:layout_below="@+id/username"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="0"
+        android:textColor="#031225"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@android:id/progress"
+        android:layout_below="@+id/username"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="/500"
+        android:textColor="#031225"
+        android:textSize="30sp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="12dp"
+        android:layout_below="@id/progress"
+        android:layout_marginTop="22dp"
+        android:layout_marginLeft="12dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sb"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/categories">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Side Bend"
+                android:textColor="@color/bg"
+                android:id="@+id/t1"
+                android:layout_centerHorizontal="true"
+                android:textSize="22dp"/>
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="225dp"
+                android:layout_below="@id/t1"
+                android:id="@+id/g1"
+                android:layout_height="175dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="12dp"
+                android:background="@color/bg"
+                android:src="@drawable/sidebends" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/g1"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/d1"
+                android:textSize="25dp"
+                android:text="20 times - Calories burnt: "
+                android:textColor="@color/bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/g1"
+                android:layout_toRightOf="@id/d1"
+                android:text="6"
+                android:id="@+id/tv1"
+                android:textSize="22dp"
+                android:textColor="@color/bg" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/d1"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="18dp"
+                android:background="#0000"
+                android:id="@+id/ac"
+                android:src="@drawable/ic_add" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="18dp"
+            android:background="@drawable/categories">
+
+            <TextView
+                android:id="@+id/t2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Jumping Jack"
+                android:textColor="@color/bg"
+                android:textSize="22dp" />
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="225dp"
+                android:layout_below="@id/t2"
+                android:id="@+id/g2"
+                android:layout_height="175dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="12dp"
+                android:background="@color/bg"
+                android:src="@drawable/jumpingjacks" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/g2"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/d2"
+                android:textSize="25dp"
+                android:text="30 times - Calories burnt: "
+                android:textColor="@color/bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/g2"
+                android:layout_toRightOf="@id/d2"
+                android:text="10"
+                android:id="@+id/tv2"
+                android:textSize="22dp"
+                android:textColor="@color/bg" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/d2"
+                android:id="@+id/kpu"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="18dp"
+                android:background="#0000"
+                android:src="@drawable/ic_add" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/categories"
+            android:layout_marginBottom="18dp">
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Elbow Plank"
+                android:textColor="@color/bg"
+                android:textSize="22dp" />
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="225dp"
+                android:layout_below="@id/t3"
+                android:id="@+id/g3"
+                android:layout_height="175dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="12dp"
+                android:background="@color/bg"
+                android:src="@drawable/elbowplank" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/g3"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/d3"
+                android:textSize="25dp"
+                android:text="14 times - Calories burnt: "
+                android:textColor="@color/bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/g3"
+                android:layout_toRightOf="@id/d3"
+                android:text="7"
+                android:id="@+id/tv3"
+                android:textSize="22dp"
+                android:textColor="@color/bg" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/d3"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="18dp"
+                android:id="@+id/td"
+                android:background="#0000"
+                android:src="@drawable/ic_add" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/categories"
+            android:orientation="vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/t4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Kneel Truck Crunches"
+                android:textColor="@color/bg"
+                android:textSize="22dp" />
+            <pl.droidsonroids.gif.GifImageView
+                android:layout_width="225dp"
+                android:layout_below="@id/t4"
+                android:id="@+id/g4"
+                android:layout_height="175dp"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="12dp"
+                android:background="@color/bg"
+                android:src="@drawable/kneetuckcrunches" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/g4"
+                android:layout_marginLeft="25dp"
+                android:id="@+id/d4"
+                android:textSize="25dp"
+                android:text="20 times - Calories burnt: "
+                android:textColor="@color/bg" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/g4"
+                android:layout_toRightOf="@id/d4"
+                android:text="9"
+                android:id="@+id/tv4"
+                android:textSize="22dp"
+                android:textColor="@color/bg" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/d4"
+                android:id="@+id/p"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="18dp"
+                android:background="#0000"
+                android:src="@drawable/ic_add" />
+        </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

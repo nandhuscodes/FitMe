@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    tools:context=".Diet">
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/header_bg"
+        android:padding="20dp"
+        android:text="nandisedoc"
+        android:textColor="#EFDF"
+        android:textSize="20sp" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textprogress"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:max="2000"
+        android:progress="0"
+        android:progressDrawable="@drawable/custom_progressbar" />
+    <TextView
+        android:id="@+id/textprogress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@android:id/progress"
+        android:layout_below="@+id/username"
+        android:layout_marginLeft="135dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="0"
+        android:textColor="#031225"
+        android:textSize="30sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@android:id/progress"
+        android:layout_below="@+id/username"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="/2000 KCal"
+        android:textColor="#031225"
+        android:textSize="30sp" />
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="15dp"
+    android:layout_below="@id/textprogress">
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/categories"
+            android:layout_marginBottom="3dp">
+
+            <TextView
+                android:id="@+id/bf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="Breakfast"
+                android:textColor="#EFDF"
+                android:textSize="30sp" />
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="49dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_add"
+                android:background="#0000"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/categories"
+            android:layout_marginBottom="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="Lunch"
+                android:id="@+id/lc"
+                android:textColor="#EFDF"
+                android:textSize="30sp" />
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="49dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_add"
+                android:background="#0000"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/categories"
+            android:layout_marginBottom="3dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="Snacks"
+                android:id="@+id/snack"
+                android:textColor="#EFDF"
+                android:textSize="30sp" />
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="49dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_add"
+                android:background="#0000"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="84dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/categories"
+            android:layout_marginBottom="30dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="25dp"
+                android:text="Dinner"
+                android:id="@+id/dn"
+                android:textColor="#EFDF"
+                android:textSize="30sp" />
+            <ImageButton
+                android:layout_width="45dp"
+                android:layout_height="49dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_add"
+                android:background="#0000"
+                android:layout_marginTop="18dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"/>
+
+        </RelativeLayout>
+    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Breakfast"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:id="@+id/bf"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/bf"
+            android:id="@+id/food"
+            android:hint="food name"
+            app:boxBackgroundColor="#453168"
+            android:textColorHint="#9D8EB6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"
+            android:layout_below="@id/food"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/bg"
+            android:id="@+id/add"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lunch"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:id="@+id/lc"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/bf"
+            android:id="@+id/food1"
+            android:hint="food name"
+            app:boxBackgroundColor="#453168"
+            android:textColorHint="#9D8EB6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"
+            android:layout_below="@id/food"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/bg"
+            android:id="@+id/add1"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Snack"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:id="@+id/sn"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/bf"
+            android:id="@+id/food2"
+            android:hint="food name"
+            app:boxBackgroundColor="#453168"
+            android:textColorHint="#9D8EB6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"
+            android:layout_below="@id/food"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/bg"
+            android:id="@+id/add2"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dinner"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:id="@+id/dn"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/bf"
+            android:id="@+id/food3"
+            android:hint="food name"
+            app:boxBackgroundColor="#453168"
+            android:textColorHint="#9D8EB6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="add"
+            android:layout_below="@id/food"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/bg"
+            android:id="@+id/add3"/>
+        <TextView
+            android:id="@+id/nf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add"
+            android:text="If the food is not found on our databse, "
+            android:textColor="@color/text"
+            android:textSize="22dp"
+            android:textStyle="bold" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/nf"
+            android:id="@+id/addfood"
+            android:hint="Food name"
+            app:boxBackgroundColor="#453168"
+            android:textColorHint="#9D8EB6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/addfood"
+            android:id="@+id/addcal"
+            android:hint="Calories per serving"
+            app:boxBackgroundColor="#453168"
+            android:textColorHint="#9D8EB6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/as"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addcal"
+            android:layout_marginLeft="150dp"
+            android:layout_marginTop="12dp"
+            android:text="Save"
+            android:textColor="@color/bg" />
+    </LinearLayout>
+</ScrollView>
+</RelativeLayout>

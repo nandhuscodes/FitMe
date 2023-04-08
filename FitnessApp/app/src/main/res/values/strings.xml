@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FitMe</string>
+    <string-array name="select">
+        <item>Female</item>
+        <item>Male</item>
+    </string-array>
+    <string name="light">fonts/Light.otf</string>
+    <string name="bold">fonts/extrabold.otf</string>
+    <string name="title">You are at</string>
+    <string name="day_scroll_date_picker">Day Scroll Date Picker</string>
+    <string name="back"><![CDATA[<<]]></string>
+    <string name="forward"><![CDATA[>>]]></string>
+</resources>

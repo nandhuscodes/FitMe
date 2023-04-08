@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_profile"
+    android:orientation="vertical"
+    android:background="#EFDCF9"
+    >
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_nav"
+        android:background="@color/bg"
+        app:itemBackground="@color/text"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"/>
+
+    <RelativeLayout
+        android:id="@+id/act"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#E1C8FC"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:id="@+id/full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/profile_image"
+            android:fontFamily="sans-serif"
+            android:text="Nandhini S"
+            android:textColor="#453168"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/full_name"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_toRightOf="@id/profile_image"
+            android:includeFontPadding="false"
+            android:text="nandnisedoc"
+            android:textColor="#453168"
+            android:textSize="14sp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/act"
+        android:id="@+id/proglay">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your progress:"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:layout_margin="12dp"/>
+        <ProgressBar
+            android:id="@+id/progressc"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerInParent="true"
+            android:indeterminateOnly="false"
+            android:progressDrawable="@drawable/progress_circle" />
+
+        <TextView
+            android:id="@+id/tvc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="0%"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_below="@id/proglay"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE PROFILE"
+            android:textStyle="bold"
+            android:textColor="@color/text"
+            android:textSize="18dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/age"
+            android:hint="Age"
+            app:boxBackgroundColor="#453168"
+            android:textColorHint="#9D8EB6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/weight"
+            android:hint="Weight"
+            app:boxBackgroundColor="#453168"
+            android:textColorHint="#9D8EB6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/height"
+            android:hint="Height"
+            app:boxBackgroundColor="#453168"
+            android:textColorHint="#9D8EB6"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/calc_bmi"
+            android:layout_gravity="center_horizontal"
+            android:text="Update"
+            android:background="#453168"
+            android:textColor="#EFDCF9"
+            android:layout_margin="15dp"/>
+
+    </LinearLayout>
+    <!-- <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+         android:layout_marginBottom="20dp"
+         android:layout_marginTop="20dp">
+         <Button
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="<<"
+             android:textColor="#235"
+             android:background="@null"
+             android:textStyle="bold"
+             android:onClick="previousMonthAction"
+             android:textSize="20sp"/>
+
+         <TextView
+             android:id="@+id/monthYearTV"
+             android:layout_width="0dp"
+             android:layout_weight="2"
+             android:layout_height="wrap_content"
+             android:text="Feb 2021"
+             android:textSize="20sp"
+             android:textAlignment="center"
+             android:textColor="@color/black"/>
+
+         <Button
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text=">>"
+             android:textColor="#235"
+             android:background="@null"
+             android:textStyle="bold"
+             android:onClick="nextMonthAction"
+             android:textSize="20sp"/>
+
+     </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal">
+
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="SUN"
+             android:textColor="#504E4E"
+             android:textAlignment="center"
+             android:textSize="16sp"/>
+
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="MON"
+             android:textColor="#504E4E"
+             android:textAlignment="center"
+             android:textSize="16sp"/>
+
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="TUE"
+             android:textColor="#504E4E"
+             android:textAlignment="center"
+             android:textSize="16sp"/>
+
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="WED"
+             android:textColor="#504E4E"
+             android:textAlignment="center"
+             android:textSize="16sp"/>
+
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="THUR"
+             android:textColor="#504E4E"
+             android:textAlignment="center"
+             android:textSize="16sp"/>
+
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="FRI"
+             android:textColor="#504E4E"
+             android:textAlignment="center"
+             android:textSize="16sp"/>
+
+         <TextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+             android:layout_weight="1"
+             android:text="SAT"
+             android:textColor="#504E4E"
+             android:textAlignment="center"
+             android:textSize="16sp"/>
+
+
+     </LinearLayout>
+
+
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/calendarRecyclerView"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"/>-->
+</RelativeLayout>
